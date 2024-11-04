@@ -1,0 +1,40 @@
+{
+	"name": "macos-spellchecker",
+	"version": "0.1.0",
+	"description": "Node.js binding to the macOS (Cocoa) spell-checker.",
+	"author": "Rotem Dan",
+	"license": "MIT",
+	"keywords": [
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rotemdan/node-macos-spellchecker"
+	},
+	"bugs": {
+		"url": "https://github.com/rotemdan/node-macos-spellchecker/issues"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"main": "./dist/Exports.js",
+	"type": "module",
+	"files": [
+		"src",
+		"dist",
+		"addons/bin/macos-x64-spellchecker.node",
+		"addons/bin/macos-arm64-spellchecker.node",
+		"tsconfig.json",
+		"README.md",
+		"LICENSE.md"
+	],
+	"scripts": {
+		"test": "node dist/Test.js"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "^22.8.6"
+	}
+}
