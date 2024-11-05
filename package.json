@@ -1,6 +1,6 @@
 {
 	"name": "macos-spellchecker",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Node.js binding to the macOS (Cocoa) spell-checker.",
 	"author": "Rotem Dan",
 	"license": "MIT",
@@ -24,8 +24,7 @@
 	"files": [
 		"src",
 		"dist",
-		"addons/bin/macos-x64-spellchecker.node",
-		"addons/bin/macos-arm64-spellchecker.node",
+		"addons/bin",
 		"tsconfig.json",
 		"README.md",
 		"LICENSE.md"
