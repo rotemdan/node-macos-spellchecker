@@ -68,10 +68,10 @@ export function createMacosSpellChecker(language: string) {
 
 export function isAddonAvailable() {
 	try {
-		console.log(`Trying to create addon..`)
+		//console.log(`Trying to create addon..`)
 		const addon = getAddonForCurrentPlatform()
 
-		console.log(`Trying to call 'isAddonLoaded'..`)
+		//console.log(`Trying to call 'isAddonLoaded'..`)
 		const result = addon.isAddonLoaded()
 
 		return result === true
