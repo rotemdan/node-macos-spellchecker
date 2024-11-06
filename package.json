@@ -1,6 +1,6 @@
 {
 	"name": "macos-spellchecker",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Node.js binding to the macOS (Cocoa) spell-checker.",
 	"author": "Rotem Dan",
 	"license": "MIT",
@@ -15,9 +15,6 @@
 	},
 	"engines": {
 		"node": ">=18"
-	},
-	"publishConfig": {
-		"access": "public"
 	},
 	"main": "./dist/Exports.js",
 	"type": "module",

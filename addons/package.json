@@ -3,9 +3,7 @@
 	"description": "N-API addon for the macOS spell-checker",
 	"version": "0.1.0",
 	"main": "",
-	"publishConfig": {
-		"access": "restricted"
-	},
+	"private": true,
 	"scripts": {
 		"build-x64": "node-gyp rebuild -arch x64 --verbose && cp build/Release/*.node ./bin",
 		"build-arm64": "node-gyp rebuild -arch arm64 --verbose && cp build/Release/*.node ./bin"
