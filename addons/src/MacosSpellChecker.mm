@@ -38,11 +38,13 @@ public:
 			return INIT_FAILED;
 		}
 
-		if (!SetLanguage(languageCode)) {
+		auto errorCode = SetLanguage(languageCode);
+
+		if (errorCode < 0) {
 			[spellChecker release];
 			spellChecker = nullptr;
-			
-			return OPERATION_FAILED;
+
+			return errorCode;
 		}
 
 		isInitialized = true;
@@ -172,9 +174,9 @@ public:
 	}
 
 private:
-	bool SetLanguage(const std::string& languageCode) {
+	int SetLanguage(const std::string& languageCode) {
 		if (languageCode.empty()) {
-			return 0;
+			return SUCCESS; // Empty language code would use the default language
 		}
 
 		@try {
@@ -209,6 +211,7 @@ int getSupportedLanguageList(std::vector<std::string>& result) {
 		for (size_t i = 0; i < languages.count; ++i) {
 			NSString* language = [languages objectAtIndex:i];
 			const char* utf8Language = [language UTF8String];
+
 			if (utf8Language) {
 				result.push_back(utf8Language);
 			}
